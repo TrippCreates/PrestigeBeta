@@ -7,18 +7,30 @@
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <!-- Google Fonts - Optima alternative -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            /* Color Palette from Theme.swift */
+            --primary: #11100F;      /* Black - Primary actions, text */
+            --secondary: #5D1C34;    /* Burgundy - Secondary actions */
+            --accent: #A67D44;       /* Gold - Accents, highlights */
+            --sage: #899481;         /* Sage - Success states, verified badges */
+            --taupe: #CDBCAB;        /* Taupe - Backgrounds, cards */
+            --cream: #EFE9E1;        /* Cream - Light backgrounds */
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Playfair Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
 
         body {
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f7;
+            color: var(--primary);
+            background-color: var(--cream);
         }
 
         .container {
@@ -28,7 +40,7 @@
         }
 
         header {
-            background-color: #1d1d1f;
+            background-color: var(--primary);
             color: white;
             padding: 2rem 0;
             margin-bottom: 2rem;
@@ -37,11 +49,12 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         .subtitle {
             font-size: 1.2rem;
-            color: #86868b;
+            color: var(--taupe);
         }
 
         .card {
@@ -50,24 +63,28 @@
             padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--taupe);
         }
 
         h2 {
-            color: #1d1d1f;
+            color: var(--primary);
             margin-bottom: 1rem;
             font-size: 1.8rem;
+            font-weight: 700;
         }
 
         .directory {
-            background: #f8f8f8;
+            background: var(--cream);
             padding: 1.5rem;
             border-radius: 8px;
             margin: 1rem 0;
+            border: 1px solid var(--taupe);
         }
 
         .directory h3 {
-            color: #1d1d1f;
+            color: var(--primary);
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         ul {
@@ -77,11 +94,11 @@
 
         li {
             margin-bottom: 0.5rem;
-            color: #515154;
+            color: var(--secondary);
         }
 
         .highlight {
-            color: #0066cc;
+            color: var(--accent);
             font-weight: 500;
         }
 
@@ -93,11 +110,13 @@
             background: white;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--taupe);
         }
 
         .waitlist-form h2 {
             text-align: center;
             margin-bottom: 1.5rem;
+            color: var(--primary);
         }
 
         .form-group {
@@ -107,41 +126,44 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #1d1d1f;
+            color: var(--primary);
+            font-weight: 500;
         }
 
         .form-group input {
             width: 100%;
             padding: 0.75rem;
-            border: 1px solid #d2d2d7;
+            border: 1px solid var(--taupe);
             border-radius: 8px;
             font-size: 1rem;
+            font-family: inherit;
         }
 
         .form-group input:focus {
             outline: none;
-            border-color: #0066cc;
-            box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(166, 125, 68, 0.2);
         }
 
         button {
             width: 100%;
             padding: 0.75rem;
-            background-color: #0066cc;
+            background-color: var(--accent);
             color: white;
             border: none;
             border-radius: 8px;
             font-size: 1rem;
             cursor: pointer;
             transition: background-color 0.2s;
+            font-weight: 500;
         }
 
         button:hover {
-            background-color: #004499;
+            background-color: var(--secondary);
         }
 
         button:disabled {
-            background-color: #999;
+            background-color: var(--taupe);
             cursor: not-allowed;
         }
 
@@ -153,13 +175,13 @@
         }
 
         .success {
-            background-color: #e8f5e9;
-            color: #2e7d32;
+            background-color: var(--sage);
+            color: white;
         }
 
         .error {
-            background-color: #ffebee;
-            color: #c62828;
+            background-color: var(--secondary);
+            color: white;
         }
     </style>
 </head>
