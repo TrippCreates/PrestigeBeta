@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prestige Project Documentation</title>
+    <title>Prestige - Where Excellence Meets</title>
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
@@ -42,25 +42,33 @@
         header {
             background-color: var(--primary);
             color: white;
-            padding: 2rem 0;
+            padding: 4rem 0;
             margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .hero {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
+            letter-spacing: 2px;
         }
 
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: var(--taupe);
+            margin-bottom: 2rem;
         }
 
         .card {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.5rem;
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border: 1px solid var(--taupe);
@@ -68,38 +76,54 @@
 
         h2 {
             color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
         }
 
-        .directory {
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
             background: var(--cream);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1rem 0;
+            padding: 2rem;
+            border-radius: 12px;
             border: 1px solid var(--taupe);
         }
 
-        .directory h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        ul {
-            list-style-type: none;
-            padding-left: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-            color: var(--secondary);
+        .feature-card h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
 
         .highlight {
             color: var(--accent);
             font-weight: 500;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: var(--primary);
+            color: white;
+            margin: 4rem 0;
+            border-radius: 12px;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: var(--taupe);
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
         }
 
         /* Waitlist Form Styles */
@@ -183,69 +207,67 @@
             background-color: var(--secondary);
             color: white;
         }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Prestige Project</h1>
-            <p class="subtitle">Project Structure Documentation</p>
+            <div class="hero">
+                <h1>PRESTIGE</h1>
+                <p class="subtitle">Where Excellence Meets</p>
+            </div>
         </div>
     </header>
 
     <main class="container">
         <div class="card">
-            <h2>Project Overview</h2>
-            <p>The Prestige project is an iOS/macOS application built using Xcode. The project follows a standard Xcode project structure with separate directories for the main application, unit tests, and UI tests.</p>
+            <h2>Empowering Professional Connections</h2>
+            <p>Prestige is more than just a dating app – it's a platform that connects ambitious, driven individuals from top universities. We understand that students from prestigious institutions are busy, hard-working people who value quality connections.</p>
         </div>
 
-        <div class="card">
-            <h2>Project Structure</h2>
-            
-            <div class="directory">
-                <h3>Main Application</h3>
-                <ul>
-                    <li><span class="highlight">Prestige/</span> - Contains the main application source code</li>
-                </ul>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Verified Excellence</h3>
+                <p>Our advanced security system ensures that every user comes from an eligible university, creating a community of verified, like-minded individuals.</p>
             </div>
-
-            <div class="directory">
-                <h3>Testing</h3>
-                <ul>
-                    <li><span class="highlight">PrestigeTests/</span> - Contains unit tests for the application</li>
-                    <li><span class="highlight">PrestigeUITests/</span> - Contains UI tests for the application</li>
-                </ul>
+            <div class="feature-card">
+                <h3>Quality Over Quantity</h3>
+                <p>No more endless swiping. Prestige connects you directly with people who share your values and aspirations.</p>
             </div>
-
-            <div class="directory">
-                <h3>Project Configuration</h3>
-                <ul>
-                    <li><span class="highlight">Prestige.xcodeproj/</span> - Xcode project configuration files</li>
-                </ul>
+            <div class="feature-card">
+                <h3>Secure & Private</h3>
+                <p>Your privacy is our priority. Our verification system maintains the highest standards of security and confidentiality.</p>
             </div>
         </div>
 
-        <div class="card">
-            <h2>Getting Started</h2>
-            <p>To work with this project:</p>
-            <ul>
-                <li>Open the project using Xcode by double-clicking the Prestige.xcodeproj file</li>
-                <li>The main application code is located in the Prestige directory</li>
-                <li>Tests can be found in the PrestigeTests and PrestigeUITests directories</li>
-            </ul>
-        </div>
-
-        <!-- Waitlist Form -->
-        <div class="waitlist-form">
-            <h2>Join the Waitlist</h2>
-            <form id="waitlistForm">
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <button type="submit" id="submitButton">Join Waitlist</button>
-                <div id="statusMessage" class="status-message"></div>
-            </form>
+        <div class="cta-section">
+            <h2>Join the Elite</h2>
+            <p>Be among the first to experience a new way of connecting with exceptional individuals.</p>
+            <div class="waitlist-form">
+                <h2>Join the Waitlist</h2>
+                <form id="waitlistForm">
+                    <div class="form-group">
+                        <label for="email">University Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your university email" required>
+                    </div>
+                    <button type="submit" id="submitButton">Join Waitlist</button>
+                    <div id="statusMessage" class="status-message"></div>
+                </form>
+            </div>
         </div>
     </main>
 
