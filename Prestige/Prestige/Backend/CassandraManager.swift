@@ -26,8 +26,12 @@ class CassandraManager {
         // Check for connection errors
         let error_code = cass_future_error_code(future)
         if error_code != CASS_OK {
-            let message = cass_future_error_message(future)
-            print("Unable to connect to Cassandra: \(String(cString: message))")
+            var message: UnsafePointer<Int8>?
+            var message_length: Int = 0
+            cass_future_error_message(future, &message, &message_length)
+            if let message = message {
+                print("Unable to connect to Cassandra: \(String(cString: message))")
+            }
         } else {
             self.session = session
             createKeyspaceAndTables()
@@ -73,8 +77,12 @@ class CassandraManager {
         
         let error_code = cass_future_error_code(future)
         if error_code != CASS_OK {
-            let message = cass_future_error_message(future)
-            print("Error executing query: \(String(cString: message))")
+            var message: UnsafePointer<Int8>?
+            var message_length: Int = 0
+            cass_future_error_message(future, &message, &message_length)
+            if let message = message {
+                print("Error executing query: \(String(cString: message))")
+            }
         }
         
         cass_future_free(future)
@@ -128,7 +136,7 @@ class CassandraManager {
         if let result = cass_future_get_result(future) {
             let iterator = cass_iterator_from_result(result)
             
-            while cass_iterator_next(iterator) {
+            while cass_iterator_next(iterator) == cass_true {
                 if let row = cass_iterator_get_row(iterator) {
                     var message: [String: Any] = [:]
                     
@@ -188,7 +196,7 @@ class CassandraManager {
     }
     
     private func getBoolValue(row: OpaquePointer, column: String) -> Bool? {
-        var value: cass_bool_t = 0
+        var value: cass_bool_t = cass_false
         
         if cass_value_get_bool(cass_row_get_column_by_name(row, column), &value) == CASS_OK {
             return value == cass_true
