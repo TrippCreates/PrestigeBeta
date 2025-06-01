@@ -1,0 +1,5 @@
+module Cassandra {
+    umbrella header "/opt/homebrew/include/cassandra.h"
+    link "cassandra"
+    export *
+} 

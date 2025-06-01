@@ -1,0 +1,7 @@
+platform :ios, '15.0'
+
+target 'Prestige' do
+  use_frameworks!
+  
+  pod 'cassandra-driver'
+end 
