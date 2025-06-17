@@ -137,3 +137,4 @@ struct ChatView_Previews: PreviewProvider {
         }
     }
 } 
+
