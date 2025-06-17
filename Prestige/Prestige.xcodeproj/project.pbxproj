@@ -75,22 +75,16 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B5A5A0D82DC3F5D900C7F5BE /* Prestige */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = Prestige;
 			sourceTree = "<group>";
 		};
 		B5A5A0E62DC3F5DB00C7F5BE /* PrestigeTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = PrestigeTests;
 			sourceTree = "<group>";
 		};
 		B5A5A0F02DC3F5DB00C7F5BE /* PrestigeUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = PrestigeUITests;
 			sourceTree = "<group>";
 		};

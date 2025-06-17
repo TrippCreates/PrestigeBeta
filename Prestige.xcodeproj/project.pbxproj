@@ -83,6 +83,8 @@
 		63A33A372E0105C400F42E6C /* Prestige.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Prestige.xcodeproj; sourceTree = "<group>"; };
 		63A365B82E0108FA00F42E6C /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Pods.xcodeproj; sourceTree = "<group>"; };
 		63A365DB2E0108FA00F42E6C /* Prestige.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Prestige.xcodeproj; sourceTree = "<group>"; };
+		63A7DA542E012DAE0095E55A /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Pods.xcodeproj; sourceTree = "<group>"; };
+		63A7DA782E012DAE0095E55A /* Prestige.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Prestige.xcodeproj; sourceTree = "<group>"; };
 		63E5257E2E00FFCF0005F800 /* Prestige.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Prestige.xcodeproj; sourceTree = "<group>"; };
 		9697ACC42A367108C5EB5A15 /* Pods_Prestige.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prestige.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A5A0D62DC3F5D900C7F5BE /* Prestige.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prestige.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +256,20 @@
 			sourceTree = "<group>";
 		};
 		63A365DF2E0108FA00F42E6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63A7DA7A2E012DAE0095E55A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63A7DA7C2E012DAE0095E55A /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -447,12 +463,20 @@
 					ProjectRef = 63A33A142E0105C400F42E6C /* Pods.xcodeproj */;
 				},
 				{
+					ProductGroup = 63A7DA7A2E012DAE0095E55A /* Products */;
+					ProjectRef = 63A7DA542E012DAE0095E55A /* Pods.xcodeproj */;
+				},
+				{
 					ProductGroup = 63A365DF2E0108FA00F42E6C /* Products */;
 					ProjectRef = 63A365B82E0108FA00F42E6C /* Pods.xcodeproj */;
 				},
 				{
 					ProductGroup = 6327300C2E012A0C0067D73E /* Products */;
 					ProjectRef = 632730082E012A0C0067D73E /* Prestige.xcodeproj */;
+				},
+				{
+					ProductGroup = 63A7DA7C2E012DAE0095E55A /* Products */;
+					ProjectRef = 63A7DA782E012DAE0095E55A /* Prestige.xcodeproj */;
 				},
 				{
 					ProductGroup = 63A33A392E0105C400F42E6C /* Products */;
